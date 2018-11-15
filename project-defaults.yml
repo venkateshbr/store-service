@@ -1,0 +1,9 @@
+swarm:
+  jaeger:
+    service-name: store-service
+    reporter-log-spans: true
+    sampler-type: ratelimiting
+    sampler-parameter: 1
+  opentracing:
+    servlet:
+      skipPattern: /health|/status
